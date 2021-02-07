@@ -1,0 +1,191 @@
+body,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+}
+
+.products {
+    height: auto;
+    margin-top: 50px;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 380px;
+    max-width: 33.3333%;
+
+    max-height: 520px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img {
+    max-height: 380px;
+    height: auto;
+
+    position: relative;
+    z-index: 10;
+
+    max-width: 283px;
+    width: auto;
+
+    margin: 0;
+}
+
+.card-content {
+    background: transparent;
+
+    margin: 0;
+    padding: 29px;
+
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    font-weight: 300;
+
+    margin-top: 0;
+}
+
+.card-price {
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.card-btn {
+    width: 80%;
+    height: 50px;
+
+    background-color: hotpink;
+    border: none;
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.card-btn:hover {
+    cursor: pointer;
+    color: black;
+    border: 1px solid gray;
+}
+
+.card-btn:focus {
+    outline: none;
+    color: black;
+    border: 1px solid gray;
+}
+
+.card-btn:active {
+    outline: none;
+    color: black;
+    border: 1px solid gray;
+}
+
+
+.modal {
+    width: 600px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 100%;
+
+    display: flex;
+    z-index: 1010;
+
+    background: white;
+    box-shadow: 0 0 60px 10px rgb(0 0 0 / 90%);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.modal-close-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 45%;
+
+    border: 0;
+    border-radius: 25px;
+
+    padding: 10px;
+    background: grey;
+
+    color: white;
+}
+
+.modal-close-btn:hover {
+    background: hotpink;
+    cursor: pointer;
+
+    color: white;
+}
+
+.closed {
+    display: none;
+}
+
+.modal-guts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* отступы */
+    padding: 20px 50px 20px 20px;
+    /* разрешим скролить */
+    overflow: auto;
+}
+
+.modal-guts form {
+    width: auto;
+    max-width: 250px;
+
+    margin: 30px 155px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-guts form h2 {
+    margin: 5px 0;
+}
+
+.modal-guts form input {
+    margin: 10px 0;
+}
+
+
+.modal-overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
